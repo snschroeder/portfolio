@@ -53,15 +53,14 @@ const textHelpers = {
         offspring.push(parent1[i]);
       }
     }
-    console.log(offspring);
-    // const gradedOffspring = this.gradeInput(offspring, goal);
-    return offspring;
+    const gradedOffspring = this.gradeInput(offspring, goal);
+    return gradedOffspring;
   },
 
   CreateOffspring(herd, goal) {
     const offspring = [];
-    for (let i = 0; i < herd[0].length; i += 1) {
-      for (let j = i + 1; j < herd[0].length; j += 1) {
+    for (let i = 0; i < herd.length; i += 1) {
+      for (let j = i + 1; j < herd.length; j += 1) {
         offspring.push(this.mutateText(herd[i], herd[j], goal));
       }
     }
@@ -113,26 +112,45 @@ const textHelpers = {
     return herd.filter((member) => this.getStrengthTotal(member) < herdAvg);
   },
 
+  findStrongest(herd) {
+    let bestParent = herd[0];
+    let strength = this.getStrengthTotal(bestParent);
+
+    for (let i = 1; i < herd.length; i += 1) {
+      if (this.getStrengthTotal(herd[1]) < strength) {
+        bestParent = herd[i];
+        strength = this.getStrengthTotal(bestParent);
+      }
+    }
+    return bestParent;
+  },
+
   evolveText(length, goal) {
     let goalReached = false;
     const herd = [];
 
-    for (let i = 0; i < 100; i += 1) {
+    for (let i = 0; i < 6; i += 1) {
       herd.push(this.generateStartText(length));
-      this.gradeInput(herd[i], goal);
     }
+
+    for (let i = 0; i < herd.length; i += 1) {
+      herd[i] = this.gradeInput(herd[i], goal);
+    }
+
+    console.log(this.findStrongest(herd));
+
+
+
+    // console.log(this.CreateOffspring(herd, goal).length);
 
     let count = 0;
 
     while (!goalReached) {
-      const breeders = this.altCullTheHerd(herd);
+
+      const breeders = this.cullTheHerd(herd);
       herd.length = 0;
-      // console.log(breeders);
 
-      // const offspring = this.CreateOffspring(breeders);
-      // console.log(offspring);
-
-      if (this.getStrengthTotal(breeders[0]) === 0 || count > 1) {
+      if (this.getStrengthTotal(breeders[0]) === 0 || count > 5000) {
         goalReached = true;
         console.log('I think I have the solution');
         console.log('count is ' + count);
@@ -142,14 +160,15 @@ const textHelpers = {
       for (let i = 0; i < 50; i += 1) {
         herd.push(this.mutateText(breeders[0], breeders[1], goal));
       }
+
       count += 1;
     }
   },
 };
 
 
-const text = 'hi';
-// const text = 'Hello, I am your test input. However, this time I am longer than before.';
+// const text = 'hi';
+const text = 'Hello I am a test string';
 const len = text.length;
 
 const results = textHelpers.evolveText(len, text);
