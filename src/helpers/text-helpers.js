@@ -125,61 +125,56 @@ const textHelpers = {
     return bestParent;
   },
 
+  stringify(offspring) {
+    const codes = [];
+
+    for (let i = 0; i < offspring.length; i += 1) {
+      codes.push(offspring[i].char);
+    }
+    return String.fromCharCode(...codes);
+  },
+
   evolveText(length, goal) {
-    let goalReached = false;
     const herd = [];
+    const evolution = [];
 
     for (let i = 0; i < 6; i += 1) {
       herd.push(this.generateStartText(length));
     }
-
     for (let i = 0; i < herd.length; i += 1) {
       herd[i] = this.gradeInput(herd[i], goal);
     }
 
-    console.log(this.findStrongest(herd));
-
-
-
-    // console.log(this.CreateOffspring(herd, goal).length);
-
+    let strongestParent = this.findStrongest(herd);
     let count = 0;
 
-    while (!goalReached) {
+    evolution.push(this.stringify(strongestParent));
 
+    while (this.getStrengthTotal(strongestParent) > 0) {
       const breeders = this.cullTheHerd(herd);
       herd.length = 0;
-
-      if (this.getStrengthTotal(breeders[0]) === 0 || count > 5000) {
-        goalReached = true;
-        console.log('I think I have the solution');
-        console.log('count is ' + count);
-        return breeders[0];
-      }
 
       for (let i = 0; i < 50; i += 1) {
         herd.push(this.mutateText(breeders[0], breeders[1], goal));
       }
-
+      strongestParent = this.findStrongest(herd);
+      evolution.push(this.stringify(strongestParent));
       count += 1;
     }
+    return evolution;
   },
 };
 
 
 // const text = 'hi';
-const text = 'Hello I am a test string';
-const len = text.length;
+// const text = 'Hello I am a test string';
+// const len = text.length;
 
-const results = textHelpers.evolveText(len, text);
+// const results = textHelpers.evolveText(len, text);
 
-const codes = [];
-
-for (let i = 0; i < results.length; i += 1) {
-  codes.push(results[i].char);
-}
 // console.log(results);
 
-console.log('output ' + String.fromCharCode(...codes));
+// console.log(results[results.length - 1]);
 
-// export default textHelpers;
+
+export default textHelpers;
