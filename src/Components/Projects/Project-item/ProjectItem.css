@@ -1,0 +1,12 @@
+.grid-item {
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+#Anonygram {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.666)),url("../../../image-assets/anonygram-display-feed.png");
+  background-size: cover;
+  background-position: center;
+}

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProjectItem from './Project-item/ProjectItem';
 
+import './Project.css';
+
 export default function Projects(props) {
   const { projects } = props;
 
@@ -12,7 +14,7 @@ export default function Projects(props) {
         {projects.map((project) => (
           <ProjectItem
             title={project.title}
-            desc={project.description}
+            desc={project.desc}
             stack={project.stack}
             image={project.image}
             fRepo={project.fRepo}
