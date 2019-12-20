@@ -1,6 +1,7 @@
 const projects = [
   {
     title: 'Anonygram',
+    id: 'Anonygram',
     desc: 'Anonygram connects nearby users on an anonymous, geolocated image-sharing platform. Allows users to post, comment, and upvote content.',
     stack: 'React, Node.js, Express, PostgreSQL, Jest, Mocha/Chai, Google Vision, Maps, and Places',
     image: 'anonygram-display-feed.png',
@@ -10,6 +11,7 @@ const projects = [
   },
   {
     title: 'AlgorithMe',
+    id: 'AlgorithMe',
     desc: 'AlgorithMe trains users in common CS algorithms by utilizing a spaced repetition algorithm. Answer a question wrong, it comes up more frequently, get it right and it shows up less often',
     stack: 'React, Node.js, Express, PostgreSQL, Jest, Mocha/Chai, Cypress',
     image: 'algorithMe2.png',
@@ -19,6 +21,7 @@ const projects = [
   },
   {
     title: 'Chord Courier',
+    id: 'Chord-Courier',
     desc: 'Chord Courier sparks musical creativity by generating randomized chord sequences by key.',
     stack: 'React, Node.js, Express, PostgreSQL, Jest, Mocha/Chai',
     image: 'chord-courier.png',
@@ -28,6 +31,7 @@ const projects = [
   },
   {
     title: 'Sort Viz',
+    id: 'Sort-Viz',
     desc: 'Sort Viz deepens users understanding of common sorting algorithms by visualizing the process.',
     stack: 'React',
     image: 'sort-viz.png',

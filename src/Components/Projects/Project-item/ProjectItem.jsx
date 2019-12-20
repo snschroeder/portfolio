@@ -8,6 +8,7 @@ import './ProjectItem.css';
 export default function ProjectItem(props) {
   const {
     title,
+    id,
     desc,
     stack,
     // image,
@@ -23,7 +24,7 @@ export default function ProjectItem(props) {
   // };
 
   return (
-    <li className="grid-item" id={title}>
+    <li className="grid-item" id={id}>
       <h3 className="grid-item-h3">{title}</h3>
 
       <div className="link-style">
@@ -46,9 +47,10 @@ export default function ProjectItem(props) {
 
 ProjectItem.defaultProps = {
   title: '',
+  id: '',
   desc: '',
   stack: '',
-  image: '',
+  // image: '',
   fRepo: '',
   bRepo: '',
   live: '',
@@ -56,9 +58,10 @@ ProjectItem.defaultProps = {
 
 ProjectItem.propTypes = {
   title: PropTypes.string,
+  id: PropTypes.string,
   desc: PropTypes.string,
   stack: PropTypes.string,
-  image: PropTypes.string,
+  // image: PropTypes.string,
   fRepo: PropTypes.string,
   bRepo: PropTypes.string,
   live: PropTypes.string,

@@ -14,6 +14,7 @@ export default function Projects(props) {
         {projects.map((project) => (
           <ProjectItem
             title={project.title}
+            id={project.id}
             desc={project.desc}
             stack={project.stack}
             image={project.image}
