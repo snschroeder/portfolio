@@ -1,5 +1,5 @@
 .more-about-container {
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 
 .more-about-h4 {
@@ -23,6 +23,10 @@
 
   .more-about-p {
     font-size: 18px;
+  }
+
+  .more-about-container {
+    margin-bottom: 200px;
   }
 }
 
