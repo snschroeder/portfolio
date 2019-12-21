@@ -15,7 +15,7 @@ export default function About() {
   const goalText = `I'm based out of Houston and I strive to create apps that help people learn or otherwise better their lives. \n
   React is my go-to choice for work on the front-end, and I'm well versed in Node.js, Express, and PostgreSQL on the back-end. \n
   I love projects that push my abilities and require me to level up. \n
-  If you would like some freelance work done or are looking to hire, you can connect with me here.
+  If you would like some freelance work done or are looking to hire, you can connect with me here. \n
   Feel free to take a look at some of recent work. 
   `;
 
