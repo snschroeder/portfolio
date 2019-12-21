@@ -1,0 +1,39 @@
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 3% 0;
+}
+
+.contact-h4 {
+  font-size: 18px;
+}
+
+.contact-link {
+  font-size: 30px;
+  color: #2D6DCC;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: #1C4480;
+}
+
+@media screen and (min-width: 40em) {
+  .contact-h4 {
+    font-size: 20px;
+  }
+  
+  .contact-link {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .contact-h4 {
+    font-size: 22px;
+  }
+
+  .contact-link {
+    font-size: 50px;
+  }
+}

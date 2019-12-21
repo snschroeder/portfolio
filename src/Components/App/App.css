@@ -1,9 +1,29 @@
+/* colors:
+darkest - #165280
+lightest - #78C4FF
+accent - #2BA3FF
+grey - #576F82
+accent2 - #1D6FAD */
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 95%;
   text-align: center;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 40em) {
+  body {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  body {
+    width: 70%;
+  }
 }

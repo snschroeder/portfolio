@@ -8,7 +8,7 @@ export default function About(props) {
   const [sortOrder, setSortOrder] = useState([]);
   const [jumbledOrder, setJumbledOrder] = useState('');
   const [jumbledText, setJumbledText] = useState('');
-  // const [buttonDisplay, setButtonDisplay] = useState({ display: 'inline-block' });
+  const [buttonDisplay, setButtonDisplay] = useState({ display: 'inline-block' });
 
   const [buttonClass, setButtonClass] = useState('about-button');
   const [textClass, setTextClass] = useState('about-h2');
@@ -54,15 +54,17 @@ export default function About(props) {
         setJumbledText(clone.join(' '));
       }, 4 + (4 * i));
     }
-    // setButtonDisplay({ display: 'none' });
     setButtonClass('about-button clicked');
     setTextClass('about-text transition');
+    setTimeout(() => {
+      setButtonDisplay({ display: 'none' });
+    }, 1500);
   };
 
   return (
     <section className="about-container">
-      <button type="button" className={buttonClass} onClick={() => animate()}>Learn more about me</button>
-      <h2 className={textClass}>{jumbledText}</h2>
+      <button type="button" className={buttonClass} style={buttonDisplay} onClick={() => animate()}>Learn more about me</button>
+      <h4 className={textClass}>{jumbledText}</h4>
     </section>
   );
 }

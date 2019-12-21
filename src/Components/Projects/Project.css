@@ -2,5 +2,17 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-auto-rows: minmax(500px, auto);
+  grid-auto-rows: minmax(600px, auto);
+  gap: 0.5rem;
+  margin-bottom: 300px;
+}
+
+@media screen and (min-width: 40em) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (min-width: 100em) {
+
 }

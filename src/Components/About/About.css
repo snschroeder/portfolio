@@ -2,7 +2,7 @@
   position: relative;
   width: 90%;
   margin: 0 auto;
-  color: lightskyblue;
+  color: #1D6FAD;
 }
 
 .about-button {
@@ -17,6 +17,10 @@
   top: 50%;
   left: 50%;
   margin: -50px 0 0 -150px;
+}
+
+.about-text {
+  white-space: pre-line;
 }
 
 .transition {
