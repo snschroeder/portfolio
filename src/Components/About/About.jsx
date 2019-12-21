@@ -59,8 +59,8 @@ export default function About() {
 
   return (
     <section className="about-container">
-      <button type="button" className={buttonClass} style={buttonDisplay} onClick={() => animate()}>Learn more about me</button>
       <h4 className={textClass}>{jumbledText}</h4>
+      <button type="button" className={buttonClass} style={buttonDisplay} onClick={() => animate()}>Learn more about me</button>
     </section>
   );
 }
