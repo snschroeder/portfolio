@@ -2,37 +2,15 @@
 const animator = {
   sortOrder: [],
 
-  // jumbleText(text) {
-  //   const results = [];
-  //   const shuffler = [];
-  //   let randomIndex;
-
-  //   for (let i = 0; i < text.length; i += 1) {
-  //     shuffler.push(i);
-  //   }
-
-  //   while (shuffler.length > 0) {
-  //     randomIndex = Math.floor(Math.random() * shuffler.length);
-  //     const index = shuffler[randomIndex];
-  //     results.push(index);
-  //     shuffler.splice(randomIndex, 1);
-  //   }
-  //   return results;
-  // },
-
   jumbleText(text) {
     const results = [];
     const shuffler = [];
     const textSplit = text.split(' ');
-    console.log(textSplit);
     let randomIndex;
 
     for (let i = 0; i < textSplit.length; i += 1) {
       shuffler.push(i);
     }
-
-    console.log(shuffler.length);
-    console.log(textSplit.length);
 
     while (shuffler.length > 0) {
       randomIndex = Math.floor(Math.random() * shuffler.length);
@@ -40,7 +18,6 @@ const animator = {
       results.push(index);
       shuffler.splice(randomIndex, 1);
     }
-    console.log(results);
     return results;
   },
 

@@ -21,6 +21,7 @@ export default function Projects(props) {
             fRepo={project.fRepo}
             bRepo={project.bRepo}
             live={project.live}
+            key={project.id}
           />
         ))}
       </ul>

@@ -5,7 +5,10 @@
 }
 
 .contact-h4 {
+  font-family: 'Bitter', serif;
   font-size: 18px;
+  margin: 0;
+  padding: 2%;
 }
 
 .contact-link {
@@ -16,6 +19,7 @@
 .contact-link:hover,
 .contact-link:focus {
   color: #1C4480;
+  transition: color 0.3s ease;
 }
 
 @media screen and (min-width: 40em) {

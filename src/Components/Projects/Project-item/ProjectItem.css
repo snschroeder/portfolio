@@ -4,26 +4,37 @@
 }
 
 .grid-item-h3 {
+  font-family: 'Bitter', serif;
+  font-size: 16px;
   text-align: center;
   color: black;
   margin: 0;
-  padding: 0;
+  padding: 2%;
+}
+
+.link-style {
+  padding: 2%;
 }
 
 .link-style a {
   text-decoration: none;
   font-size: 1rem;
-  color: #165280;
+  color: #2D6DCC;
   font-weight: bold;
 }
 
 .link-style a:hover,
 .link-style a:focus {
-  color: #1D6FAD;
+  color: #1C4480;;
   transition: color 0.3s ease;
 }
 
+.pipe-divider {
+  color: #1D6FAD;
+}
+
 .grid-item-h4 {
+  font-size: 15px;
   color: white;
   text-shadow: 1px 1px black;
   width: 100%;
@@ -32,6 +43,7 @@
 }
 
 .grid-item-h5 {
+  font-size: 14px;
   color: white;
   text-shadow: 1px 1px black;
   width: 100%;
@@ -55,19 +67,19 @@
 }
 
 #Anonygram {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7)),url("../../../image-assets/anonygram-display-feed.png");
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.72)),url("../../../image-assets/anonygram-display-feed.png");
 }
 
 #AlgorithMe {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7)),url("../../../image-assets/algorithMe.png");
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.72)),url("../../../image-assets/algorithMe.png");
 }
 
 #Chord-Courier {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7)),url("../../../image-assets/chord-courier.png");
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.72)),url("../../../image-assets/chord-courier.png");
 }
 
 #Sort-Viz {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7)),url("../../../image-assets/sort-viz.png");
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.72)),url("../../../image-assets/sort-viz.png");
 }
 
 @media screen and (min-width: 40em) {

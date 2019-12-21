@@ -32,7 +32,7 @@ const projects = [
   {
     title: 'Sort Viz',
     id: 'Sort-Viz',
-    desc: 'Sort Viz deepens users understanding of common sorting algorithms by visualizing the process.',
+    desc: 'Sort Viz deepens users understanding of common sorting algorithms by programmatically animating the process.',
     stack: 'Built with: React',
     image: 'sort-viz.png',
     fRepo: 'https://github.com/snschroeder/sort-visualizer',

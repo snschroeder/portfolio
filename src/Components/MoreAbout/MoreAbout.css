@@ -1,0 +1,17 @@
+.more-about-container {
+  margin-bottom: 300px;
+}
+
+.more-about-h4 {
+  white-space: pre-line;
+  font-family: 'Bitter', serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 2%;
+}
+
+.more-about-p {
+  white-space: pre-line;
+  margin: 0;
+  padding: 2%;
+}

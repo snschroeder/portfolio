@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import animationHelpers from '../../helpers/animation-helper';
 
 import './About.css';
 
-export default function About(props) {
+export default function About() {
   const [sortOrder, setSortOrder] = useState([]);
   const [jumbledOrder, setJumbledOrder] = useState('');
   const [jumbledText, setJumbledText] = useState('');
@@ -13,19 +12,16 @@ export default function About(props) {
   const [buttonClass, setButtonClass] = useState('about-button');
   const [textClass, setTextClass] = useState('about-h2');
 
-  const { goalText } = props;
+  const goalText = `I'm based out of Houston and I strive to create apps that help people learn or otherwise better their lives. \n
+  React is my go-to choice for work on the front-end, and I'm well versed in Node.js, Express, and PostgreSQL on the back-end. \n
+  I love projects that push my abilities and require me to level up. \n
+  If you would like some freelance work done or are looking to hire, you can connect with me here.
+  Feel free to take a look at some of recent work. 
+  `;
 
   useEffect(() => {
     setJumbledOrder(animationHelpers.jumbleText(goalText));
   }, []);
-
-  // const createJumbledString = () => {
-  //   let output = '';
-  //   for (let i = 0; i < jumbledOrder.length; i += 1) {
-  //     output += goalText[jumbledOrder[i]];
-  //   }
-  //   return output;
-  // };
 
   const createJumbledString = () => {
     const clone = goalText.split(' ');
@@ -68,11 +64,3 @@ export default function About(props) {
     </section>
   );
 }
-
-About.defaultProps = {
-  goalText: '',
-};
-
-About.propTypes = {
-  goalText: PropTypes.string,
-};

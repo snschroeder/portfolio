@@ -3,13 +3,17 @@ darkest - #165280
 lightest - #78C4FF
 accent - #2BA3FF
 grey - #576F82
-accent2 - #1D6FAD */
+accent2 - #1D6FAD
+font-family: 'Bitter', serif;
+font-family: 'Roboto', sans-serif;
+*/
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 2rem auto;
   width: 95%;
   text-align: center;
