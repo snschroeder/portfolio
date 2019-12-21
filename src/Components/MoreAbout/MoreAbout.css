@@ -15,3 +15,23 @@
   margin: 0;
   padding: 2%;
 }
+
+@media screen and (min-width: 40em) {
+  .more-about-h4 {
+    font-size: 20px;
+  }
+
+  .more-about-p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .more-about-h4 {
+    font-size: 22px;
+  }
+
+  .more-about-p {
+    font-size: 20px;
+  }
+}

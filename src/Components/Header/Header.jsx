@@ -4,7 +4,7 @@ import './Header.css';
 
 export default function Header() {
   return (
-    <header>
+    <header className="header">
       <h1 className="header-h1">Hi</h1>
       <h2 className="header-h2">My name is Scott</h2>
       <h3 className="header-h3">I write code to help others grow and connect</h3>

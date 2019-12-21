@@ -10,7 +10,7 @@ export default function About() {
   const [buttonDisplay, setButtonDisplay] = useState({ display: 'inline-block' });
 
   const [buttonClass, setButtonClass] = useState('about-button');
-  const [textClass, setTextClass] = useState('about-h2');
+  const [textClass, setTextClass] = useState('about-h4');
 
   const goalText = `I'm based out of Houston and I strive to create apps that help people learn or otherwise better their lives. \n
   React is my go-to choice for work on the front-end, and I'm well versed in Node.js, Express, and PostgreSQL on the back-end. \n

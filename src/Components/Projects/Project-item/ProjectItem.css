@@ -87,8 +87,14 @@
     grid-column: span 3;
     grid-row: span 1;
   }
+
+  .grid-item-h3 {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 100em) {
-
+  .grid-item-h3 {
+    font-size: 22px;
+  }
 }

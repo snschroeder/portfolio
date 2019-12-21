@@ -3,6 +3,7 @@
   width: 90%;
   margin: 0 auto;
   color: #1D6FAD;
+  padding: 2%;
 }
 
 .about-button {
@@ -24,6 +25,11 @@
   white-space: pre-line;
   margin: 0;
   padding: 2%;
+  font-size: 16px;
+}
+
+.about-h4 {
+  font-size: 16px;
 }
 
 .transition {
@@ -33,5 +39,25 @@
 
 .clicked {
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 0.9s ease;
+}
+
+@media screen and (min-width: 40em) {
+  .about-text {
+    font-size: 20px;
+  }
+
+  .about-h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .about-text {
+    font-size: 22px;
+  }
+
+  .about-h4 {
+    font-size: 22px;
+  }
 }
