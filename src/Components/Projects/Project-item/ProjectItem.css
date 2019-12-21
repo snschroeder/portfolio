@@ -91,10 +91,28 @@
   .grid-item-h3 {
     font-size: 20px;
   }
+
+  .grid-item-h4 {
+    font-size: 18px;
+  }
+
+  .grid-item-h5 {
+    font-size: 16px;
+  }
+
+  .link-style a,
+  .pipe-divider {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 100em) {
   .grid-item-h3 {
     font-size: 22px;
+  }
+  
+  .link-style a,
+  .pipe-divider {
+    font-size: 20px;
   }
 }
