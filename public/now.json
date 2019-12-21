@@ -1,7 +1,7 @@
 {
-  "version": 1,
-  "alias": "sns-react-portfolio",
-  "name": "sns-react-portfolio",
+  "version": 2,
+  "name": "sns-portfolio",
+  "alias": "sns-portfolio",
   "routes": [
     {
       "src": "^/static/(.*)",
@@ -10,14 +10,18 @@
     {
       "src": "^/favicon.ico$",
       "dest": "/favicon.ico"
-     },
-     {
+    },
+    {
       "src": "^/manifest.json$",
       "dest": "/manifest.json"
-     },
+    },
+    {
+      "src": "^/site.webmanifest.json$",
+      "dest": "/site.webmanifest.json"
+    },
     {
       "src": ".*",
       "dest": "/index.html"
     }
   ]
-}
+ }
